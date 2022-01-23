@@ -8,7 +8,6 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
 import { RouterModule, Routes } from "@angular/router";
 import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { ServersSideBarComponent } from './pages/servers-side-bar/servers-side-bar.component';
 import { RoomsSideBarComponent } from './pages/rooms-side-bar/rooms-side-bar.component';
 import { SubRoomsSideBarComponent } from './pages/sub-rooms-side-bar/sub-rooms-side-bar.component';
 import { MainChatComponent } from './pages/main-chat/main-chat.component';
@@ -27,7 +26,6 @@ const routes: Routes = [
     MainPageComponent,
     HeaderComponent,
     FooterComponent,
-    ServersSideBarComponent,
     RoomsSideBarComponent,
     SubRoomsSideBarComponent,
     MainChatComponent,
