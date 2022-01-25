@@ -13,6 +13,9 @@ import { SubRoomsSideBarComponent } from './pages/sub-rooms-side-bar/sub-rooms-s
 import { MainChatComponent } from './pages/main-chat/main-chat.component';
 import { UserListBarComponent } from './pages/user-list-bar/user-list-bar.component';
 import { MainSideBarComponent } from './pages/main-side-bar/main-side-bar.component';
+import { RoomComponent } from './pages/room/room.component';
+import { TextBoxComponent } from './pages/text-box/text-box.component';
+import { ChatBoxComponent } from './pages/chat-box/chat-box.component';
 
 const routes: Routes = [
     { path: 'home', component: HomePageComponent },
@@ -30,7 +33,10 @@ const routes: Routes = [
     SubRoomsSideBarComponent,
     MainChatComponent,
     UserListBarComponent,
-    MainSideBarComponent
+    MainSideBarComponent,
+    RoomComponent,
+    TextBoxComponent,
+    ChatBoxComponent
   ],
   imports: [
     BrowserModule,

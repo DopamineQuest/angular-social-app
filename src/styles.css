@@ -27,3 +27,28 @@ body {
 h1 {
   margin-bottom: 16px;
 }
+
+input {
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: #ff8830;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background .3s ease;
+}
+
+button:hover {
+  background: #ff7000;
+}
+
+button:disabled {
+  cursor: default;
+  background: rgba(255, 136, 48, 0.46);
+}

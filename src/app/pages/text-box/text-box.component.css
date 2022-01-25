@@ -1,0 +1,19 @@
+#message-form {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+
+#message-form input {
+  border: 1px solid #c5c5c5;
+  width: 100%;
+  padding: 12px;
+  margin: 0 16px 0 0;
+  flex-grow: 1;
+  background-color: rgba(255, 112, 0, 0.05);
+}
+
+#message-form button {
+  font-size: 14px;
+}
+
