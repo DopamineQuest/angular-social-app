@@ -124,25 +124,25 @@
 
 /* Message Styles */
 
-.message {
-  margin-bottom: 26px;
-}
+/*.message {*/
+/*  margin-bottom: 26px;*/
+/*}*/
 
-.message__name {
-  font-weight: 600;
-  font-size: 14px;
-  margin-right: 0px;
-}
+/*.message__name {*/
+/*  font-weight: 600;*/
+/*  font-size: 14px;*/
+/*  margin-right: 0px;*/
+/*}*/
 
-.message__meta {
-  color: #b0b0b0;
-  font-size: 12px;
-  float:right;
-}
+/*.message__meta {*/
+/*  color: #b0b0b0;*/
+/*  font-size: 12px;*/
+/*  float:right;*/
+/*}*/
 
-.message a {
-  color: #0070CC;
-}
+/*.message a {*/
+/*  color: #0070CC;*/
+/*}*/
 
 /* Message Composition Styles */
 
