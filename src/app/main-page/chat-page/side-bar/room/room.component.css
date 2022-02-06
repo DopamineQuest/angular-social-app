@@ -38,3 +38,90 @@
 /** {*/
 /*  background: red;*/
 /*}*/
+
+
+.image-content {
+  width: 81%;
+  height: 81%;
+}
+
+/*.image-content:hover {*/
+/*  width: 80%;*/
+/*  height: 80%;*/
+/*}*/
+
+/*.image-content:active {*/
+/*  width: 78%;*/
+/*  height: 78%;*/
+/*  transition: height .2s, width .2s*/
+/*}*/
+
+
+.inner-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-image-container:hover {
+  width: 95%;
+  height: 95%;
+}
+
+.inner-image-container:active {
+  width: 91%;
+  height: 91%;
+  transition: height .02s, width .02s
+}
+
+
+/*.image-content:hover {*/
+/*  width: 80%;*/
+/*  height: 80%;*/
+/*  transition: height .05s, width .05s*/
+/*}*/
+
+/*.image-content:active {*/
+/*  width: 78%;*/
+/*  height: 78%;*/
+/*  transition: height .02s, width .02s*/
+/*}*/
+
+/*.image-content:hover {*/
+/*  width: 89%;*/
+/*  height: 89%;*/
+/*  transition: height .05s, width .05s*/
+/*}*/
+
+/*.image-content:active {*/
+/*  width: 83%;*/
+/*  height: 83%;*/
+/*  transition: height .02s, width .02s*/
+/*}*/
+
+/*.image-content:hover {*/
+/*  width: 89%;*/
+/*  height: 89%;*/
+/*  transition: height .05s, width .05s*/
+/*}*/
+
+/*.image-content:active {*/
+/*  width: 93%;*/
+/*  height: 93%;*/
+/*  transition: height .02s, width .02s*/
+/*}*/
+
+
+
+.outer-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

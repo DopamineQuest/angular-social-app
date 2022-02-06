@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomsSideBarComponent implements OnInit {
 
-  elements = Array(5);
+  elements = Array(25);
 
   constructor() { }
 

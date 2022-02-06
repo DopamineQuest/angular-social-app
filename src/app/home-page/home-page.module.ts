@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {HomePageComponent} from "./home-page/home-page.component";
+import {HomePageComponent} from "./registration-login-page/home-page/home-page.component";
 import {RouterModule, Routes} from "@angular/router";
 import {SharedModule} from "../shared/shared.module";
+import {HomePageRoutingModule} from "./home-page-routing.module";
+import { LoginPageComponent } from './registration-login-page/login-page/login-page.component';
+import { RegistrationPageComponent } from './registration-login-page/registration-page/registration-page.component';
 
-const routes: Routes = [
-  { path: 'home', component: HomePageComponent }
-];
+
+// const routes: Routes = [
+//   { path: 'home', component: HomePageComponent }
+// ];
 
 @NgModule({
-  declarations: [HomePageComponent],
+  declarations: [HomePageComponent, LoginPageComponent, RegistrationPageComponent],
   imports: [
     CommonModule,
     SharedModule,
-    RouterModule.forRoot(routes)
+    HomePageRoutingModule,
+    // RouterModule.forRoot(routes)
   ],
   exports: [
     HomePageComponent

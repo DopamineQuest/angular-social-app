@@ -1,5 +1,16 @@
+<!--<form id="message-form">-->
+<!--  <input id="message-input" name="message" placeholder="type here..." required autocomplete="off">-->
+<!--  <button id="message-button">Send</button>-->
+<!--</form>-->
+
 <form id="message-form">
-  <input name="message" placeholder="type here..." required autocomplete="off">
-  <button>Send</button>
+  <input type ="text" id="message-input" name="message" [formControl]="message" placeholder="type here..." required autocomplete="off">
+  <button type ="submit" id="message-button" (keydown.enter)="buttonClick($event)" (click)="buttonClick($event)" >Send</button>
 </form>
 
+
+
+<!--<label id="message-form">-->
+<!--  <input id="message-input" name="message" type="text" [formControl]="message" placeholder="type here..." required autocomplete="off">-->
+<!--  <button type ="submit" id="message-button" (click)="buttonClick($event)" (keydown.enter)="buttonClick($event)">Send</button>-->
+<!--</label>-->

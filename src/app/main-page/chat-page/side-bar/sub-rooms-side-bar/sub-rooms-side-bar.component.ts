@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubRoomsSideBarComponent implements OnInit {
 
+  elements = Array(15);
   constructor() { }
 
   ngOnInit(): void {

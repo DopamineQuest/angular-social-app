@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormControl} from "@angular/forms";
+import {ChatService} from "../../../services/chat-service/chat.service";
 
 @Component({
   selector: 'app-text-box',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TextBoxComponent implements OnInit {
 
-  constructor() { }
+  message = new FormControl('');
+  constructor(private _chatService: ChatService) { }
 
   ngOnInit(): void {
   }
 
+  buttonClick(variable: any): void {
+    console.log(this.message.value);
+    this._chatService.sendMessage(this.message.value);
+    this.message.reset();
+
+    variable.preventDefault();
+
+  }
 }

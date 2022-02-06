@@ -85,6 +85,7 @@
 
 .chat {
   display: flex;
+  /*border: 1px solid #c5c5c5;*/
 }
 
 /*.chat__sidebar {*/
@@ -101,8 +102,8 @@
   flex-direction: row;
   max-height: 100vh;
   background-color: #fdfdfd;
-  max-width: 300px;
-  min-width: 130px;
+  max-width: 230px;
+  min-width: 180px;
   overflow-y: scroll;
   height: 100vh;
 }
