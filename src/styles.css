@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+app-header, app-footer {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+input {
+  font-size: 14px;
+}
+
+body {
+  line-height: 1.4;
+  color: #333333;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+input {
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: #ff8830;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background .3s ease;
+}
+
+button:hover {
+  background: #ff7000;
+}
+
+button:disabled {
+  cursor: default;
+  background: rgba(255, 136, 48, 0.46);
+}
+
+.messaging-box {
+  border: 1px solid #ff0000;
+  background-color: rgba(255, 0, 0, 0.37);
+  padding: 10px;
+  margin: 20px 10px;
+  text-align: center;
+  color: #383535;
+}

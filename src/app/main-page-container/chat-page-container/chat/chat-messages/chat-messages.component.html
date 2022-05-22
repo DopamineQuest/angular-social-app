@@ -1,0 +1,5 @@
+<h5 *ngFor="let msg of messages">
+  <div class="top-line"><span class="username">{{ msg.author.username }}</span><span class="date">{{ msg.date | date: "long" }} </span></div>
+  <p class="content">{{ msg.content}}</p>
+  <hr class="hr">
+</h5>

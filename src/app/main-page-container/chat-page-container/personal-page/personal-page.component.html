@@ -1,0 +1,9 @@
+<div class="main__chat" [ngClass]="{ mainChatExpanded: sidebarToggle }">
+  <app-chat-top-bar></app-chat-top-bar>
+  <app-chat-messages [messages]="(messageChannels.length > 0 && messageChannelIndex >= 0) ? messageChannels[messageChannelIndex].messages: []" id="messages" class="chat__messages"></app-chat-messages>
+  <app-text-box [channel]="messageChannels[messageChannelIndex]" class="compose"></app-text-box>
+</div>
+
+<div class="side__chat" [ngClass]="{ sideBarExpanded: sidebarToggle }">
+  <app-sub-rooms-side-bar [messageChannelIndex]="messageChannelIndex" [messageChannels]="messageChannels"></app-sub-rooms-side-bar>
+</div>

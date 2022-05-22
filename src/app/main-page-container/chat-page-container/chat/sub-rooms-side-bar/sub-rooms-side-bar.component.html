@@ -1,0 +1,12 @@
+<app-side-top-bar></app-side-top-bar>
+<div class="side-bar-text">
+  <h3><p>Friends</p></h3>
+  <hr class="hr">
+  <h5><p>Messages</p></h5>
+</div>
+
+<app-message-channel (pointerdown)="onClick(i, msgChannel)"
+                     *ngFor="let msgChannel of messageChannels; let i = index"
+                     [data] = msgChannel [isSelected]="i === messageChannelIndex"
+                     [ngClass]="[(i === messageChannelIndex) ? 'selected' : 'message-channel', isUnread(msgChannel) ? 'unread' : '']">
+</app-message-channel>

@@ -1,0 +1,4 @@
+<form id="message-form">
+  <input type ="text" id="message-input" name="message" [formControl]="message" placeholder="type here..." required autocomplete="off" >
+  <button type ="submit" id="message-button" (keydown.enter)="buttonClick($event)" (click)="buttonClick($event)" >Send</button>
+</form>
