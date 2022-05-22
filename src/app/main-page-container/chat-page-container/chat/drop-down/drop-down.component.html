@@ -1,0 +1,8 @@
+<div *ngIf="!(selected && searchValue && searchValue.length > 0 ) else usersBlock"></div>
+
+<ng-template #usersBlock>
+  <div id="main-container" #mainContainer>
+    <div class="search-entry" (pointerdown)="onClick(element)" *ngFor="let element of users; let i = index" [innerHTML]="element.username | searchTextFormatter:searchValue"></div>
+    <p class="search-entry no-highlight #noHighlight" *ngIf="displayNoUsersFound">No Users Found</p>
+  </div>
+</ng-template>

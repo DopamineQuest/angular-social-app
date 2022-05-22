@@ -1,0 +1,29 @@
+<div id="welcome-container">
+  <div id="banner">
+    <div id="welcome-text">
+      <h1>Welcome!</h1>
+    </div>
+    <div>
+      <h2 id="no-password-text">No passwords or emails required. Jump right in to test it out!</h2>
+    </div>
+    <form (ngSubmit)="quickRegister()" id="quick-register">
+      <label>Quick Register</label>
+      <div>
+        <input type="text" name="username" placeholder="Username" [(ngModel)]="username">
+        <button type="submit">Register</button>
+      </div>
+    </form>
+    <form (ngSubmit)="quickLogin()" id="quick-login">
+      <label>Quick Login</label>
+      <div>
+        <input type="text" name="username" placeholder="Username" [(ngModel)]="username">
+        <button type="submit">Login</button>
+      </div>
+    </form>
+    <div class="messaging-box" *ngIf="warningMessage.length > 0">{{ warningMessage }}</div>
+    <div id="nav-links">
+      <a routerLink="/login">Have an account? Login Here</a>
+      <a routerLink="/register">Register</a>
+    </div>
+  </div>
+</div>

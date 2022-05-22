@@ -1,0 +1,6 @@
+<img [ngClass]="{ selected: isSelected }" class="image-content" src="../../../../../assets/people-2.jpeg" alt="icon">
+<div class="main-container">
+  <span style="user-select: none" *ngFor="let element of data?.users; let i = index">
+    <div class="user-container" *ngIf="element.username != 'replace with username'">{{element.username}}</div>
+  </span>
+</div>
