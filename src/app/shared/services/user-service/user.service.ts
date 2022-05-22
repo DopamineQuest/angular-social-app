@@ -1,75 +1,50 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable} from 'rxjs';
 import { User } from "../../models/user";
-import { SocketService } from "../socket-service/socket.service";
+import { ChatService } from "../../../main-page-container/services/chat-service/chat.service";
+import { RestApiService } from "../rest-api-service/rest-api.service";
+import { map } from 'rxjs/operators';
+import { UserProfileService } from "../user-profile.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  _userName: string = "Antonin";
-  _userRoom: string = "1";
-  constructor(private _socketService: SocketService) {
-    console.log("----------------------constructor - user-service");
+  user: User = {
+    _id: "",
+    username: "",
+    friends: []
+  };
 
+  private loginStatus: BehaviorSubject<Boolean> = new BehaviorSubject<Boolean>(false);
 
-    this._socketService.getSocket().on("users", () =>
-    {
-      this._socketService.getSocket().emit('join', {username: this._userName, room: this._userRoom}, (username: User | undefined) => {
-
-      })
-
-    })
+  constructor(private _chatService: ChatService, private _restApiService: RestApiService, private _userProfileService: UserProfileService) {
   }
 
-  getUser(): Observable<User>
-  {
-    return new Observable(observer => {
-      console.log("----------------------getUser() - newObservable - user-service");
-
-      // this._socketService.getSocket().emit('join', {username: this._userName, room: this._userRoom}, (username: User | undefined) => {
-      //   console.log("----------------------getUser() - newObservable - callback - user-service");
-      //   observer.next(username);
-      // })
-
-      this._socketService.getSocket().on("connected", () => {
-        console.log("CONNECTED!!: from client side connceted")
-        this._socketService.getSocket().emit('join', {username: this._userName, room: this._userRoom}, (username: User | undefined) => {
-          console.log("----------------------getUser() - newObservable - callback - user-service");
-          observer.next(username);
-        })
-      })
-
-
-
-
-      console.log("----------------------emit over - getUser() - newObservable - user-service");
-
-    });
+  getLoginStatus(): BehaviorSubject<Boolean> {
+    return this.loginStatus;
   }
 
-  // newUser(order: PizzaOrders): void {
-  //   this._socket.emit("newPizzaOrder", order);
-  // }
-
-  findUser(username: string): void {
-    console.log("FINDING USER-insider function call")
-    this._socketService.getSocket().emit("getUserByUsername", username, (user: User | undefined) => {
-      console.log("----------------------FOUND USERNAME", user?._username);
-
-    });
+  quickRegisterUser(user: any): Observable<any> {
+    return this._restApiService.addUser(user).pipe(map((res: any) => {
+      this.user = res;
+      this._userProfileService.setUser(this.user);
+      this._chatService.socketIOConnect(this.user);
+      this.setLoginStatus(true);
+    }));
   }
 
+  quickLoginUser(user: any): Observable<any> {
+    return this._restApiService.login(user).pipe(map((res: any) => {
+      this.user = res;
+      this._userProfileService.setUser(this.user);
+      this._chatService.socketIOConnect(this.user);
+      this.setLoginStatus(true);
+    }));
+  }
+
+  setLoginStatus(value: boolean): void {
+    this.loginStatus.next(value);
+  }
 }
-
-
-// this._socketService.getSocket().emit('join', {username: this._userName, room: this._userRoom}, (error: any) => {
-//   if(error) {
-//     alert(error)
-//     location.href ='/'
-//   }
-// }, (username: User | undefined) => {
-//   console.log("----------------------getUser() - newObservable - callback - user-service");
-//   observer.next(username);
-// })

@@ -1,0 +1,7 @@
+<form id="message-form" spellcheck="false">
+  <input type ="text" id="message-input" name="message" [formControl]="message" placeholder="search..." required autocomplete="off"
+         (keyup)="onKeypressEvent($event)" (focus)="onFocus()" (blur)="onBlur()">
+
+  <button hidden type="submit" id="message-button" (keydown.enter)="buttonClick($event)" (click)="buttonClick($event)" >Send</button>
+  <app-drop-down [selected]="selected" class="drop-down" [users]="users" [searchValue]="message.value" [displayNoUsersFound]="displayNoUsersFound"></app-drop-down>
+</form>

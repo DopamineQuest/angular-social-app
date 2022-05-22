@@ -1,4 +1,5 @@
-export class User {
-  _id: number | undefined
-  _username: string | undefined;
+export interface User {
+  _id: string,
+  username: string;
+  friends: User[];
 }

@@ -1,0 +1,116 @@
+.message-channel {
+  background-color: #f8f8f8;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
+  transition: background-color .2s, box-shadow .15s;
+  height: 4rem;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  padding: 8px;
+}
+
+.message-channel:hover:not(.unread) {
+  background-color: #eeeeee;
+  box-shadow: 0 0 3px rgba(255, 107, 0, 0.25);
+  transition: background-color .03s, box-shadow .1s;
+}
+
+.message-channel:active {
+  background-color: #c9c9c9;
+  transition: box-shadow .08s;
+  box-shadow: 0px 0px 15px rgba(255, 107, 0, 0.16);
+}
+
+.unread {
+  border: 1px solid rgba(118, 255, 0, 0.82);
+  background-color: rgba(64, 255, 0, 0.08);
+  transition: box-shadow .08s;
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-iteration-count: 4;
+  animation-direction: alternate;
+  box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
+}
+
+@keyframes fadein {
+  from {
+    background-color: rgba(64, 255, 0, 0);
+    border: 1px solid rgba(118, 255, 0, 0);
+  }
+
+  to {
+    background-color: rgba(64, 255, 0, 0.08);
+    border: 1px solid rgba(118, 255, 0, 0.82);
+  }
+}
+
+.side-bar-text {
+  margin-top: .5em;
+  margin-bottom: 1em;
+  margin-left: .5em;
+  margin-right: .5em;
+  color: #5b5b60;
+  font-size: 1.55rem;
+}
+
+.hr {
+  border: 1px solid rgba(117, 119, 136, 0.06);
+  margin: 1em 0;
+}
+
+.selected {
+  background-color: rgba(191, 0, 255, 0.03);
+  border: 1px solid rgba(140, 0, 255, 0.4);
+  margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
+  transition: background-color .4s, box-shadow .15s;
+  height: 4rem;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  padding: 8px;
+}
+
+.selected:enabled {
+  background-color: rgba(255, 106, 0, 0.22);
+  margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
+  transition: background-color .4s, box-shadow .15s;
+  height: 4rem;
+  justify-content: left;
+  align-items: center;
+  display: flex;
+  padding: 8px;
+}
+
+@media screen and (max-width: 1492px) {
+
+}
+
+@media screen and (max-width: 1024px) {
+  .side-bar-text {
+    margin-top: .5em;
+    margin-bottom: 1em;
+    margin-left: .5em;
+    margin-right: .5em;
+    color: #5b5b60;
+  }
+}
+
+@media screen and (max-width: 792px) {
+
+}
+
+@media screen and (max-width: 492px) {
+
+}

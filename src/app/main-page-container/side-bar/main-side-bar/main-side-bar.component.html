@@ -1,0 +1,15 @@
+<button class="home-btn" (click)="home($event)">Home</button>
+<hr class="hr-top">
+
+<button class="sub-side-bar-btn" (click)="emit($event);" [ngClass]="{searchButtonHighlight: sidebarToggle}">
+  <div class="search-icon" >
+    <div class="outer-image-container">
+      <div class="inner-image-container">
+        <img class="image-content" src="../../../../assets/mag-glass.png" alt="icon">
+      </div>
+    </div>
+  </div>
+</button>
+
+<hr class="hr-bot">
+<app-room  *ngFor="let i of elements"></app-room>

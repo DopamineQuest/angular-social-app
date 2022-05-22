@@ -1,5 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
 app-header, app-footer {
   text-align: center;
 }
@@ -8,6 +6,7 @@ app-header, app-footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 html {
@@ -21,7 +20,6 @@ input {
 body {
   line-height: 1.4;
   color: #333333;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -51,4 +49,13 @@ button:hover {
 button:disabled {
   cursor: default;
   background: rgba(255, 136, 48, 0.46);
+}
+
+.messaging-box {
+  border: 1px solid #ff0000;
+  background-color: rgba(255, 0, 0, 0.37);
+  padding: 10px;
+  margin: 20px 10px;
+  text-align: center;
+  color: #383535;
 }

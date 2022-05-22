@@ -12,30 +12,13 @@ export class SocketService {
   private _socketUrl: string = "http://localhost:9090/user";
   private _socket;
   constructor() {
-    console.log("----------------------constuctor - socket-service");
     this._socket = io(this._socketUrl);
-    // this._socket.on("social-app", (user: any | undefined) => {
-    //   console.log("----------------------constuctor - socket.on(social-app) - socket-service");
-    // });
-
-    console.log("----------------------constuctor - socket-service- ==========emit test");
-
-
     this._socket.emit('test', (error: any) => {
-        console.log("----------------------test works!!", error);
     })
-
-    // setTimeout(() => {
-    //   this._socket.emit('test', (error: any) => {
-    //     console.log("----------------------test works!!", error);
-    //   })
-    // },1000)
 
   }
 
-  getSocket(): any
-  {
-    console.log("----------------------getSocket() - socket-service");
+  getSocket(): any {
     return this._socket;
   }
 
